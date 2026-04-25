@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deliza Wellness – Treatments</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./membership.css" />
+  <link rel="stylesheet" href="./responsive.css">
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR =====
+    Figma: floating pill, 58px tall, small logo, compact Book Now
+  -->
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="../index.html">
+        <img class="logo-img" src="../images/logo.png" alt="Deliza Wellness Spa" />
+      </a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../treatements/treatement.html">Spa Menu</a></li>
+      <li><a href="../package/package.html">PACKAGES</a></li>
+      <li><a href="../location/location.html">Locations</a></li>
+      <li><a href="./membership.html" class="active">Membership</a></li>
+    <li><a href="../contact/contact.html">contact us</a></li>
+    <li class="mobile-book">
+  <a href="../contact/contact.html" class="mobile-book-btn">Book Now</a>
+</li>
+    </ul>
+    
+
+    <a href="../contact/contact.html"><button class="btn-book">Book Now</button></a>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- FLOAT ICON -->
+  <div class="floating-contact">
+    <a href="#"><i class="fa-solid fa-phone"></i></a>
+    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+  <!-- Membership HERO -->
+  <section class="member-hero">
+    <div class="section-label">
+      <span class="line"></span>
+      <span>Membership Plans</span>
+      <span class="line"></span>
+    </div>
+
+    <h1>
+      Designed for a Consistent,<br>
+      Elevated Wellness Experience
+    </h1>
+
+    <p>
+      Choose a plan that fits your lifestyle and enjoy regular treatments at the best value. Experience wellness made
+      simple, affordable, and consistent.
+
+    </p>
+  </section>
+
+
+  <section class="plans-section">
+    <div class="plans-grid">
+
+      <!-- Silver -->
+      <div class="plan-card light">
+        <h3 class="plan-name">SILVER</h3>
+        <p class="plan-sub">Calm Plan</p>
+        
+
+        <div class="plan-meta">
+          <span>4 Months</span>
+          <span class="hours-badge dark">7 Hours</span>
+        </div>
+
+        <div class="plan-price">Rs.1,799</div>
+
+        <div class="plan-rate dark-box">
+          Rs.1,285/hr eff. rate<br>
+          Regular Rs.2,299/hr
+        </div>
+
+        <div class="plan-saving">57% saving</div>
+
+        <ul class="plan-list">
+          <li>All standard treatments</li>
+          <li>Priority WhatsApp booking</li>
+          <li>Valid all 3 branches</li>
+          <li>Birthday bonus (15 min)</li>
+        </ul>
+
+        <a href="#" class="plan-btn dark-btn">SELECT THIS PLAN</a>
+      </div>
+
+      <!-- Gold -->
+      <div class="plan-card featured">
+        <h3 class="plan-name">GOLD</h3>
+        <p class="plan-sub">Restore Plan</p>
+
+        <div class="plan-meta">
+          <span>7 Months</span>
+          <span class="hours-badge light">17 Hours</span>
+        </div>
+
+        <div class="plan-price">Rs.18,999</div>
+
+        <div class="plan-rate light-box">
+          Rs.1,117/hr eff. rate<br>
+          Regular: Rs.2,999/hr
+        </div>
+
+        <div class="plan-saving">63% saving</div>
+
+        <ul class="plan-list">
+          <li>Everything in Silver</li>
+          <li>1 Free Facial per month</li>
+          <li>10% off extra sessions</li>
+          <li>Transferable 2x/month</li>
+          <li>Gold welcome kit</li>
+        </ul>
+
+        <a href="#" class="plan-btn light-btn">SELECT THIS PLAN</a>
+      </div>
+
+      <!-- Pearl -->
+      <div class="plan-card featured">
+        <h3 class="plan-name">PEARL</h3>
+        <p class="plan-sub">Renew Plan</p>
+
+        <div class="plan-meta">
+          <span>11 Months</span>
+          <span class="hours-badge light">32 Hours</span>
+        </div>
+
+        <div class="plan-price">Rs.32,999</div>
+
+        <div class="plan-rate light-box">
+          Rs.1,031/hr eff. rate<br>
+          Regular: Rs.2,999/hr
+        </div>
+
+        <div class="plan-saving">66% saving</div>
+
+        <ul class="plan-list">
+          <li>Everything in Gold</li>
+          <li>Premium Ayurvedic suite</li>
+          <li>Quarterly wellness</li>
+          <li>2 Complimentary couple</li>
+          <li>Dedicated concierge</li>
+        </ul>
+
+        <a href="#" class="plan-btn light-btn">SELECT THIS PLAN</a>
+      </div>
+
+      <!-- Platinum -->
+      <div class="plan-card light">
+        <h3 class="plan-name">PLATINUM</h3>
+        <p class="plan-sub">Family/Corporate</p>
+
+        <div class="plan-meta">
+          <span>14 Months</span>
+          <span class="hours-badge dark">80 Hours</span>
+        </div>
+
+        <div class="plan-price">Rs.59,999</div>
+
+        <div class="plan-rate dark-box">
+          Rs.749/hr eff. rate<br>
+          Regular: Rs.2,999/hr
+        </div>
+
+        <div class="plan-saving">75% saving</div>
+
+        <ul class="plan-list">
+          <li>Shared across 4 members</li>
+          <li>Everything in Pearl</li>
+          <li>Personalised wellness</li>
+          <li>Corporate GST billing</li>
+          <li>Annual event access</li>
+        </ul>
+
+        <a href="#" class="plan-btn dark-btn">SELECT THIS PLAN</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Membership HERO --2--- -->
+  <section class="member-hero">
+    <div class="section-label">
+      <span class="line"></span>
+      <span>Benefits of Spa Membership</span>
+      <span class="line"></span>
+    </div>
+
+    <h1>
+      What Makes Deliza Wellness <br>
+      Spa Membership Truly Special?
+    </h1>
+
+    <p>
+      Membership plans offer better value compared to individual
+      bookings—more relaxation at a better price.
+    </p>
+  </section>
+
+  <section class="benefits-section">
+    <div class="benefits-grid">
+
+      <!-- Card 1 -->
+      <div class="benefit-card">
+        <div class="icon-box">
+          <img src="../images/m1.png" alt="Exceptional Savings" class="icon icon-default">
+
+        </div>
+        <h3 class="benefit-title">Exceptional<br>Savings</h3>
+        <p class="benefit-text">
+          Indulge in up to 33% off on all therapies — a privilege reserved solely for members of distinction.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="benefit-card">
+        <div class="icon-box">
+          <img src="../images/m2.png" alt="Priority Reservations" class="icon icon-default">
+
+        </div>
+        <h3 class="benefit-title">Priority<br>Reservations</h3>
+        <p class="benefit-text">
+          Your time is sacred. Secure your preferred hour with exclusive front-of-queue access, always.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="benefit-card">
+        <div class="icon-box">
+          <img src="../images/m3.png" alt="Birthday Privilege" class="icon icon-default">
+
+        </div>
+        <h3 class="benefit-title">Birthday<br>Privilege</h3>
+        <p class="benefit-text">
+          Celebrate your special month with a complimentary therapy — our gift, your moment of pure luxury.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="benefit-card">
+        <div class="icon-box">
+          <img src="../images/m4.png" alt="Member-Only Offers" class="icon icon-default">
+
+        </div>
+        <h3 class="benefit-title">Member-Only<br>Offers</h3>
+        <p class="benefit-text">
+          A devoted wellness concierge attends to your every need — seamlessly, discreetly, and with genuine care.
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="benefit-card">
+        <div class="icon-box">
+          <img src="../images/m5.png" alt="Personalized Treatment Plans" class="icon icon-default">
+
+        </div>
+        <h3 class="benefit-title">Personalized<br>Treatment Plans</h3>
+        <p class="benefit-text">
+          Expertly curated wellness journeys tailored to your body, rhythm, and deepest restoration goals.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="member-hero">
+    <div class="section-label">
+      <span class="line"></span>
+      <span>Simple & Fast</span>
+      <span class="line"></span>
+    </div>
+
+    <h1>
+      How Does It Work?
+    </h1>
+
+    <p>
+      Join in just 5 simple steps
+    </p>
+  </section>
+  <section class="membership-steps">
+  <div class="steps-wrapper">
+    
+    <div class="step-box">
+      <h2>01</h2>
+      <p>Choose A<br>Membership Plan</p>
+    </div>
+
+    <div class="step-box">
+      <h2>02</h2>
+      <p>Pay For Your<br>Membership</p>
+    </div>
+
+    <div class="step-box">
+      <h2>03</h2>
+      <p>Book Your<br>Appointment</p>
+    </div>
+
+    <div class="step-box">
+      <h2>04</h2>
+      <p>Receive<br>Confirmation</p>
+    </div>
+
+    <div class="step-box">
+      <h2>05</h2>
+      <p>Enjoy Your Spa<br>Treatment</p>
+    </div>
+
+  </div>
+</section>
+
+ <section class="member-hero">
+        <h1>
+      Always Ready to Help You
+    </h1>
+
+    <p>
+      For any queries or support related to our membership plans, feel free to reach out to our dedicated support team.
+    </p>
+  </section>
+
+  <section class="newsletter-section ">
+  <div class="top-buttons">
+    <a href="#" class="top-btn filled">CONTACT US</a>
+    <a href="#" class="top-btn outline">GET IN TOUCH</a>
+  </div>
+
+  <div class="newsletter-row cardin">
+    <h2 class="newsletter-title">Subscribe To Our Newsletter</h2>
+
+    <form class="newsletter-form ">
+      <input type="email" placeholder="Enter your email">
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+  
+<footer class="site-footer" id="1">
+  <div class="footer-grid">
+
+    <div class="footer-brand">
+      <div class="footer-brand-top">
+        <h2 class="footer-logo">DELIZA</h2>
+        <p class="footer-logo-sub">Wellness Spa</p>
+        <p class="footer-desc">
+          A sanctuary of calm and luxury positioned near Bengaluru's international airport
+          corridor. Restoring balance to body, mind and soul - one exceptional visit at a time.
+        </p>
+      </div>
+
+      <div class="footer-social-wrap">
+        <h3 class="footer-social-title">FOLLOW US</h3>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/delizawellnessspa" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/delizawellness/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/DelizaWellness" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>NAVIGATE</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Spa Menu</a></li>
+        <li><a href="#">Packages</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Membership</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Book Now</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>TREATMENTS</h3>
+      <ul>
+        <li><a href="#">Swedish Massage</a></li>
+        <li><a href="#">Deep Tissue</a></li>
+        <li><a href="#">Ayurvedic Abhyanga</a></li>
+        <li><a href="#">Hot Stone Therapy</a></li>
+        <li><a href="#">Aromatherapy</a></li>
+        <li><a href="#">Body Scrub &amp; Wrap</a></li>
+        <li><a href="#">Ayurvedic Abhyanga</a></li>
+        <li><a href="#">Hot Stone Therapy</a></li>
+        <li><a href="#">Aromatherapy</a></li>
+        <li><a href="#">Body Scrub &amp; Wrap</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h3>CONTACT</h3>
+      <ul class="f-contact">
+        <li><i class="fa-solid fa-location-dot"></i> Chikkajala</li>
+        <li><i class="fa-solid fa-location-dot"></i> Devanahalli</li>
+        <li><i class="fa-solid fa-phone"></i> +91 XXXX XXX XXX</li>
+        <li><i class="fa-regular fa-envelope"></i> hello@delizaspa.in</li>
+        <li class="smdate"><i class="fa-regular fa-calendar"></i> Mon - Sun 10:00 AM - 10:30 PM</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>2026 Deliza Wellness Spa. All rights reserved. | Designed by Quantixmedia</p>
+
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</div>
+</footer>
+<script src="./membership.js"></script>
+<script src="../leadpop.js"></script>
+</body>
+
+</html>

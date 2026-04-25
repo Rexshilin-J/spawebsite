@@ -1,0 +1,388 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: #041f0d;
+  --bg-card: #0b4a1b;
+  --bg-card-2: #0d5520;
+  --line: rgba(255, 255, 255, 0.14);
+  --border: rgba(255, 255, 255, 0.22);
+  --border-strong: rgba(255, 255, 255, 0.42);
+  --text-main: #f6f2e9;
+  --text-soft: rgba(246, 242, 233, 0.78);
+  --placeholder: rgba(255, 255, 255, 0.38);
+  --white: #ffffff;
+  --btn-text: #0b3a17;
+  --shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #06140a;
+  color: var(--white);
+}
+
+/* ===== Background ===== */
+.page-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(4, 16, 8, 0.62), rgba(4, 16, 8, 0.62)),
+    url("../images/hero1.png") center/cover no-repeat;
+  filter: blur(8px) brightness(0.58);
+  transform: scale(1.04);
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.26);
+  z-index: -1;
+}
+
+/* ===== Center layout ===== */
+.booking-overlay {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 20px;
+}
+
+/* ===== Popup ===== */
+.booking-popup {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-card-2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 42px 54px 46px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.22) transparent;
+}
+
+.booking-popup::-webkit-scrollbar {
+  width: 8px;
+}
+
+.booking-popup::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.booking-popup::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+}
+
+/* ===== Close button ===== */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--white);
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.28s ease;
+  z-index: 5;
+}
+
+.close-btn:hover {
+  background: var(--white);
+  color: #0c3917;
+  transform: rotate(90deg);
+}
+
+/* ===== Header ===== */
+.appointment-wrapper {
+  width: 100%;
+}
+
+.appointment-header {
+  padding-right: 60px;
+}
+
+.appointment-header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(46px, 4.8vw, 74px);
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  color: var(--text-main);
+  margin-bottom: 14px;
+}
+
+.appointment-header p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.appointment-line {
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  margin: 28px 0 30px;
+}
+
+/* ===== Form ===== */
+.appointment-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.appointment-form > .form-grid:last-of-type {
+  margin-bottom: 22px;
+}
+
+.appointment-form select,
+.appointment-form input,
+.appointment-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+  color: var(--white);
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.appointment-form input,
+.appointment-form select {
+  height: 64px;
+  padding: 0 20px;
+}
+
+.appointment-form textarea {
+  min-height: 150px;
+  padding: 18px 20px;
+  resize: vertical;
+  margin-bottom: 26px;
+}
+
+.appointment-form input::placeholder,
+.appointment-form textarea::placeholder {
+  color: var(--placeholder);
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: var(--border-strong);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.06);
+}
+
+.appointment-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-bottom: 22px;
+  padding-right: 56px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.9) 50%),
+    linear-gradient(135deg, rgba(255,255,255,0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 28px) 29px,
+    calc(100% - 20px) 29px;
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+}
+
+.appointment-form select option {
+  color: #111;
+}
+
+/* ===== Button ===== */
+.appointment-form button {
+  width: 100%;
+  height: 62px;
+  border: 1.5px solid #f4f0e7;
+  border-radius: 18px;
+  background: #f4f0e7;
+  color: var(--btn-text);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.28s ease;
+}
+
+.appointment-form button:hover {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.72);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.14);
+}
+
+/* ===== 1440 / desktop ===== */
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .booking-popup {
+    max-width: 1120px;
+    padding: 38px 46px 42px;
+  }
+
+  .appointment-header h1 {
+    font-size: 64px;
+  }
+}
+
+/* ===== laptop ===== */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .booking-popup {
+    max-width: 1040px;
+    padding: 34px 38px 38px;
+  }
+
+  .appointment-header h1 {
+    font-size: 56px;
+  }
+
+  .appointment-form input,
+  .appointment-form select {
+    height: 60px;
+  }
+}
+
+/* ===== tablet ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .booking-overlay {
+    padding: 24px 16px;
+  }
+
+  .booking-popup {
+    max-width: 94%;
+    padding: 30px 28px 34px;
+    border-radius: 24px;
+  }
+
+  .appointment-header {
+    padding-right: 50px;
+  }
+
+  .appointment-header h1 {
+    font-size: 48px;
+  }
+
+  .appointment-header p {
+    font-size: 15px;
+  }
+
+  .form-grid {
+    gap: 18px;
+  }
+
+  .appointment-form input,
+  .appointment-form select {
+    height: 56px;
+    font-size: 15px;
+  }
+
+  .appointment-form textarea {
+    min-height: 130px;
+  }
+}
+
+/* ===== mobile ===== */
+@media (max-width: 768px) {
+  .booking-overlay {
+    padding: 12px;
+    align-items: flex-start;
+  }
+
+  .booking-popup {
+    max-height: unset;
+    min-height: calc(100vh - 24px);
+    border-radius: 22px;
+    padding: 24px 18px 28px;
+  }
+
+  .close-btn {
+    top: 14px;
+    right: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .appointment-header {
+    padding-right: 44px;
+  }
+
+  .appointment-header h1 {
+    font-size: 38px;
+    line-height: 1.04;
+    margin-bottom: 10px;
+  }
+
+  .appointment-header p {
+    font-size: 14px;
+  }
+
+  .appointment-line {
+    margin: 22px 0 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .appointment-form select,
+  .appointment-form input {
+    height: 54px;
+    padding: 0 16px;
+    border-radius: 14px;
+    font-size: 15px;
+  }
+
+  .appointment-form textarea {
+    min-height: 118px;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .appointment-form button {
+    height: 54px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+}

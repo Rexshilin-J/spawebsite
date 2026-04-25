@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment</title>
+
+  <link rel="stylesheet" href="./appointment.css" />
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="page-bg"></div>
+
+  <!-- POPUP STYLE PAGE -->
+  <div class="booking-overlay">
+
+    <div class="booking-popup">
+
+      <!-- CLOSE BUTTON -->
+      <div class="close-btn" id="closeBtn">&times;</div>
+
+      <!-- CONTENT -->
+      <div class="appointment-wrapper">
+
+        <div class="appointment-header">
+          <h1>Reserve an Appointment</h1>
+          <p>All fields required. Your data is never shared.</p>
+        </div>
+
+        <div class="appointment-line"></div>
+
+        <form class="appointment-form">
+
+          <div class="form-grid">
+            <input type="text" placeholder="Full Name">
+            <input type="tel" placeholder="Phone Number">
+          </div>
+
+          <select>
+            <option>Select Branch</option>
+            <option>Chikkajala</option>
+            <option>Devanahalli</option>
+          </select>
+
+          <select>
+            <option>Select Treatment</option>
+            <option>Thai Massage</option>
+          </select>
+
+          <div class="form-grid">
+            <input type="date">
+            <input type="time">
+          </div>
+
+          <textarea placeholder="Additional Notes"></textarea>
+
+          <button type="submit">BOOK APPOINTMENT</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+<script src="./appointment.js"></script>
+</body>
+</html>
