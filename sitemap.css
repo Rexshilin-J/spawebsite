@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8f3ec, #f5f9f6);
+  overflow-x: hidden;
+}
+
+.sitemap-section {
+  padding: 80px 20px;
+}
+
+.sitemap-container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #022f15;
+  margin-bottom: 30px;
+}
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sitemap-list li {
+  margin: 12px 0;
+}
+
+.sitemap-list a {
+  text-decoration: none;
+  color: #033b16;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.sitemap-list a:hover {
+  color: #0f5c2f;
+  padding-left: 8px;
+}
+
+/* ============================================================
+   TABLET  481px – 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .sitemap-section {
+    padding: 60px 20px;
+  }
+
+  .sitemap-container {
+    padding: 30px 24px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: clamp(24px, 5.5vw, 32px);
+    margin-bottom: 22px;
+  }
+
+  .sitemap-list a {
+    font-size: 15px;
+  }
+
+  .sitemap-list li {
+    margin: 10px 0;
+  }
+}
+
+/* ============================================================
+   MOBILE  ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  .sitemap-section {
+    padding: 40px 14px;
+  }
+
+  .sitemap-container {
+    padding: 22px 18px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: clamp(20px, 7vw, 26px);
+    margin-bottom: 18px;
+  }
+
+  .sitemap-list a {
+    font-size: 14px;
+  }
+
+  .sitemap-list li {
+    margin: 8px 0;
+  }
+}

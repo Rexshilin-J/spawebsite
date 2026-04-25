@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8f3ec, #f5f9f6);
+  overflow-x: hidden;
+}
+
+.privacy-section {
+  padding: 80px 20px;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.08),
+    0 2px 8px rgba(0,0,0,0.05);
+}
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #022f15;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  margin-top: 28px;
+  color: #0f3b22;
+  position: relative;
+  padding-left: 12px;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 18px;
+  background: #0f3b22;
+  border-radius: 2px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.intro {
+  font-weight: 500;
+  background: #f1f7f3;
+  padding: 12px 16px;
+  border-left: 4px solid #0f3b22;
+  border-radius: 6px;
+}
+
+strong {
+  color: #022f15;
+}
+
+.privacy-container:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+/* ============================================================
+   TABLET  481px – 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  .privacy-section {
+    padding: 60px 20px;
+  }
+
+  .privacy-container {
+    padding: 32px 28px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 6vw, 34px);
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    font-size: 17px;
+    margin-top: 22px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .intro {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* ============================================================
+   MOBILE  ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  .privacy-section {
+    padding: 40px 14px;
+  }
+
+  .privacy-container {
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: clamp(22px, 7.5vw, 28px);
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+  h2::before {
+    height: 15px;
+    top: 3px;
+  }
+
+  p {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .intro {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+}

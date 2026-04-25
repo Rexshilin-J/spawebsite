@@ -1,0 +1,2854 @@
+/* ============================================================
+   DELIZA WELLNESS SPA — RESPONSIVE_FIXED.CSS
+   Clean breakpoint structure:
+     Mobile  : 0px – 480px
+     Tablet  : 481px – 768px
+     Laptop  : 769px – 1024px
+     Desktop : 1025px – 1280px
+     Wide    : 1281px+
+   ============================================================ */
+
+/* ============================================================
+   0. BASE OVERFLOW GUARD
+   ============================================================ */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+.hero,
+.hero-content,
+.hero-bg,
+section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* ============================================================
+   DELIZA WELLNESS SPA — LAPTOP LARGE (1366px – 1440px)
+   Only this breakpoint is changed.
+   All other breakpoints remain untouched.
+   ============================================================ */
+
+@media (min-width: 1366px) and (max-width: 1440px) {
+
+  /* ──────────────────────────────────────────
+     NAVBAR
+  ────────────────────────────────────────── */
+  .navbar {
+   height: 82px;
+    width: calc(100% - 58px);
+    max-width: 1410px;
+    top: 22px;
+    padding: 0 24px;
+    border-radius: 30px;                      /* reset base so em units scale up */
+  }
+
+  .navbar.scrolled {
+    top: 10px;
+  }
+
+  .logo {
+      margin-left: 18px;
+  }
+
+  .logo-img {
+    height: 64px;                        /* bigger logo — was 40px */
+  }
+
+  /* Nav links */
+  .nav-links {
+    gap: 34px;
+    font-size: 1em;          
+       align-items: center;            /* reset */
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    font-weight: 800;
+  }
+
+  /* Book button */
+  .btn-book {
+    padding: 14px 26px;
+    font-size: 15px;
+    border-radius: 14px;
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+
+  /* ──────────────────────────────────────────
+     HERO SECTION
+  ────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  .hero-content {
+    max-width: 1320px;
+    padding-top: 0px;                  /* reduced — was 170px, buttons were off-screen */
+  }
+
+  .hero-h1 {
+    font-size: clamp(50px, 4.5vw, 100px); /* reduced — was too big causing 4-line wrap */
+    line-height: 1.9;
+    margin-bottom: 18px;
+
+  }
+
+  .hero-pills {
+    gap: 60px;
+    margin-bottom: 18px;
+  }
+
+  /* Pills — Relax · Renew · Rejuvenate */
+  .hero-pill,
+  .pill {
+    font-size: 25px;
+  }
+
+  .hero-body {
+    font-size: 20px;
+    line-height: 1.9;
+    max-width: 540px;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    gap: px;
+    margin-top: 28px;
+  }
+
+  /* CTA Buttons */
+  .btn-filled,
+  .btn-outline {
+    height: 54px;
+    padding: 0 32px;
+    font-size: 16px;
+    border-radius: 14px;
+    min-width: 170px;
+    letter-spacing: 0.09em;
+    margin-top: 30px;
+  }
+/* ──────────────────────────────────────────
+   THERAPIES SECTION (FIXED)
+────────────────────────────────────────── */
+
+  .therapy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;                  /* 🔥 balanced spacing */
+    max-width: 1280px;          /* 🔥 center content */
+    margin: 60px auto 40px;
+    padding: 0 20px;
+  }
+
+  .therapy-card {
+    position: relative;
+    height: 520px;              /* 🔥 equal height (bigger look) */
+    overflow: hidden;
+    /* border-radius: 8px; */
+  }
+
+  .therapy-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* 🔥 no stretch */
+    transition: transform 0.5s ease;
+  }
+
+  .therapy-card:hover .therapy-img {
+    transform: scale(1.06);     /* 🔥 smooth zoom */
+  }
+
+  /* bottom bar */
+  .therapy-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #1f3d2b;
+    padding: 14px 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .therapy-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .book-now-btn {
+    font-size: 22px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #fff;
+    color: #1f3d2b;
+    font-weight: 600;
+  }
+  /* ──────────────────────────────────────────
+   WHY DELIZA SECTION — 1440 FIX
+────────────────────────────────────────── */
+
+
+  /* SECTION WIDTH */
+  .why-section {
+    max-width: 1320px;
+    margin: 0 auto;
+     padding: 150px 20px 90px;
+  }
+
+  /* MAIN GRID (2 COLUMN ONLY) */
+  .why-grid {
+  display: grid;
+    grid-template-columns: 1.3fr 1.6fr; /* 🔥 cards side wider */
+    gap: 36px;
+    align-items: stretch;
+  }
+
+  /* LEFT SIDE (CARDS GRID) */
+  .why-cards-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+
+  /* CARD */
+  .why-card {
+    min-height: 300px;
+    padding: 40px 36px;
+  }
+
+  /* IMAGE COLUMN */
+  .why-image-col {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* IMAGE */
+  .why-img {
+    width: 100%;
+    height: 100%;
+    min-height: 640px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+  }
+ /* ──────────────────────────────────────────
+     Package SECTION
+  ────────────────────────────────────────── */
+   .best-seller-label {
+  max-width: 1240px;   
+  margin: 0 auto 40px; 
+  padding: 0 10px;   
+  font-size: 35px;
+}
+  .packages-grid {
+    max-width: 1240px;
+    margin: 0 auto;
+    gap: 28px;
+  }
+
+  .pkg-card {
+    min-height: 540px;
+    padding: 42px 34px;
+  }
+
+  .pkg-num {
+    font-size: 72px;
+    font-weight: 500;
+  }
+
+  /* TITLE */
+  .pkg-name {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  /* SMALL TEXT */
+  .pkg-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* DURATION BUTTON */
+  .pkg-duration {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  /* PRICE */
+  .pkg-price {
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  .pkg-old-price {
+    font-size: 16px;
+  }
+
+  /* INCLUDES LIST */
+  .pkg-includes li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* BEST FOR */
+  .pkg-best {
+    font-size: 14px;
+  }
+
+  /* BUTTON */
+  .pkg-btn {
+    font-size: 20px;
+    padding: 12px 22px;
+  }
+
+
+
+  /* ──────────────────────────────────────────
+     LOCATIONS SECTION
+  ────────────────────────────────────────── */
+  .locations-section {
+    padding: 48px 24px;
+  }
+
+  .loc-city {
+    font-size: 32px;
+  }
+
+  .loc-region {
+    font-size: 13px;
+  }
+
+  .loc-addr {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .loc-contact,
+  .loc-map {
+    font-size: 13px;
+  }
+
+  .open {
+    font-size: 28px;
+  }
+
+  .btn-view-all-packages {
+  font-size: 17px;
+  padding: 14px 36px;
+  /* border-radius: px; */
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+}
+
+.pkg-btn {
+  font-size: 16px;      /* 🔥 text size */
+  padding: 12px 28px;   /* 🔥 height + width */
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+  /* ──────────────────────────────────────────
+     REVIEWS SECTION
+  ────────────────────────────────────────── */
+  .reviews-section {
+    padding: 72px 0 60px;
+  }
+
+  .review-card {
+    width: 320px;
+    min-height: 220px;
+    padding: 24px 22px;
+  }
+
+  .review-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .review-user img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .review-name {
+    font-size: 16px;
+  }
+
+  .review-source {
+    font-size: 11px;
+  }
+
+  .stars {
+    font-size: 13px;
+  }
+
+  /* ──────────────────────────────────────────
+     MAGIC / MARQUEE SECTION
+  ────────────────────────────────────────── */
+  .magic-section {
+    padding: 32px 32px 52px;
+  }
+
+  .magic-title {
+    font-size: clamp(32px, 4vw, 52px);
+  }
+
+  /* ──────────────────────────────────────────
+     OFFER STRIP
+  ────────────────────────────────────────── */
+  .offer-track span {
+    font-size: 20px;
+    padding: 0 14px;
+  }
+
+  /* ──────────────────────────────────────────
+     CTA SECTION
+  ────────────────────────────────────────── */
+  .cta-section {
+    padding: 72px 32px 44px;
+  }
+
+  .cta-heading {
+    font-size: clamp(32px, 4vw, 54px);
+  }
+
+  .cta-text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* ──────────────────────────────────────────
+     BOOKING SECTION
+  ────────────────────────────────────────── */
+  .booking-layout {
+    max-width: 1320px;
+    min-height: 820px;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .booking-form-wrap {
+    padding: 52px 72px;
+    /* overflow: visible; */
+  }
+
+  .booking-title {
+    font-size: 54px;
+  }
+
+  .booking-subtitle {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  
+
+  .form-group input {
+    height: 52px;
+    font-size: 16px;
+    border: 1.5px solid rgba(255,255,255,0.45);
+  }
+
+  .confirm-btn,
+  .whatsapp-btn,
+  .call-btn {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .booking-info {
+    padding: 0 70px;
+    margin-top: 70px;
+  }
+
+  .info-line {
+    gap: 22px;
+    font-size: 18px !important;
+  }
+
+  .info-line p {
+    font-size: 15px !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+/* HORIZONTAL LINE */
+.booking-divider {
+  height: 2px;
+  margin: 100px 0;
+  background: rgba(255,255,255,0.25);
+  position: relative;   
+  width: calc(100% + 90px) !;
+ margin-right: -90px !important; 
+}
+
+/* VERTICAL LINE FROM SAME POINT */
+.booking-divider::after {
+  content: "";
+  position: absolute;
+
+  top: 0;        /* 🔥 same point → join */
+  left: 100%;    /* 🔥 exactly end of line */
+
+  width: 2px;
+  height: 1000px;   /* extend down */
+  background: rgba(255,255,255,0.25);
+}
+
+.booking-layout::after {
+  display: none !important;   /* 🔥 remove extra vertical line */
+}
+
+  /* ──────────────────────────────────────────
+     FOOTER
+  ────────────────────────────────────────── */
+  .footer-logo {
+    font-size: 54px;
+  }
+
+  .footer-logo-sub {
+    font-size: 13px;
+    letter-spacing: 0.28em;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-col h3,
+  .footer-contact h3,
+  .footer-social-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .footer-col a,
+  .f-contact li {
+    font-size: 13px;
+  }
+
+  .footer-socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom-links a {
+    font-size: 12px;
+  }
+
+  /* ──────────────────────────────────────────
+     AIRPORT SECTION
+     (if present — class names from your base CSS)
+  ────────────────────────────────────────── */
+  .airport-section {
+    padding: 44px 32px 52px;
+  }
+
+  .airport-left h2 {
+    font-size: clamp(36px, 4vw, 52px);
+  }
+
+  .airport-right p {
+    font-size: clamp(16px, 1.6vw, 20px);
+  }
+
+  /* ──────────────────────────────────────────
+     PACKAGES SECTION
+  ────────────────────────────────────────── */
+  .packages-section {
+    padding: 56px 24px;
+  }
+
+  .packages-section .section-heading {
+    font-size: 36px;
+  }
+
+  .packages-section .section-sub {
+    font-size: 15px;
+  }
+
+  .pkg-card {
+    padding: 26px 20px;
+  }
+
+  /* ──────────────────────────────────────────
+     GLOBAL SECTION LABELS / HEADINGS
+     (shared utility classes used across sections)
+  ────────────────────────────────────────── */
+  .section-label {
+    font-size: 13px;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .label-bar {
+    width: 10px;
+    height: 18px;
+  }
+
+  /* Generic section heading — update selector if your
+     base CSS uses a different class e.g. .section-title */
+  .section-heading {
+    font-size: clamp(30px, 3.5vw, 48px);
+  }
+
+  .section-sub,
+  .section-desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
+/* END @media (min-width: 1366px) and (max-width: 1440px) */
+/* ============================================================
+   2. LAPTOP (769px – 1024px)
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* NAVBAR */
+ .navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+   text-transform: uppercase;
+  font-weight: 600;
+  position: fixed;
+  top: 19px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
+  max-width: 1280px;
+  background: rgba(255,255,255,0.98);
+  border-radius: 17px;
+   box-shadow: 
+  0 -5px 13px rgba(0,0,0,0.08),  /* 🔼 top */
+  0 4px 13px rgba(0,0,0,0.1),    /* 🔽 bottom */
+  0 10px 30px rgba(0,0,0,0.15);  /* deep */
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1px 0 1px;
+  height: 50px;
+  z-index: 1000;
+  transition: box-shadow 0.3s, top 0.3s;
+}
+
+.navbar.scrolled {
+  /* box-shadow: 0 6px 40px rgba(56, 208, 26, 0.18); */
+  top: 8px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 0.3in;
+  
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: 2px;
+}
+
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-block; /* important for scale */
+  color: #2e3f2f;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #102E16;          /* color change */
+  transform: scale(1.12);  /* boom effect */
+}
+
+.nav-links a.active {
+  color: #013813;              /* dark green */
+  transform: scale(1.12);      /* same as hover */
+}
+.mobile-book {
+  display: none;
+}
+.btn-book {
+  padding: 7px 15px;
+  background: #102E16;
+  color: var(--white);
+  font-family:'Poppins', sans-serif;
+  font-size: 0.88em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1.5px solid #102E16;
+  cursor: pointer;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  margin-right: 0.3in;
+}
+/* HOVER */
+.btn-book:hover {
+  background:transparent ; 
+  color: #000;
+  border-color: var(--green-dark);
+  transform: translateY(-1px);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--green-dark);
+  transition: all 0.3s;
+}
+  /* HERO */
+ .hero {
+  position: relative;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+}
+
+.hero-bg,
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg {
+  background-image: url("./images/hero1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 72% center;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+ margin: 0 auto;
+  padding-top: 140px;
+margin: 0 auto;
+  padding-top: 140px;
+margin: 0 auto;
+  padding-top: 140px;
+           /* remove scroll push */
+  box-sizing: border-box;
+}
+
+.hero-h1 {
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+}
+
+.hero-pills {
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.hero-body {
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 460px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+  /* MAGIC / MARQUEE */
+  .marquee-track { animation: marqueeFix 28s linear infinite; }
+
+  /* OFFER STRIP */
+  .offer-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .offer-strip {
+    width: 100%;
+    overflow: hidden;
+    background: #013813;
+    padding: 8px 0;
+    white-space: nowrap;
+  }
+
+  .offer-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    animation: scrollOfferMobile 28s linear infinite;
+  }
+
+  .offer-track span {
+    padding: 0 10px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .offer-track span:first-child { padding-left: 0; }
+  .offer-track span:last-child { padding-right: 0; }
+
+  .offer-section,
+  .offer-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* THERAPIES */
+ .therapy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    padding: 0 24px;
+    margin: 40px auto 28px;
+    align-items: stretch;
+  }
+
+  .therapy-card {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .therapy-img {
+    width: 100%;
+      height: 445px; /* same image height */
+    overflow: hidden;
+  }
+
+  .therapy-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .therapy-card:nth-child(3) {
+    grid-column: auto;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .therapy-overlay,
+  .therapy-info,
+  .therapy-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 68px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: rgba(10, 45, 20, 0.48);
+    backdrop-filter: blur(6px);
+  }
+
+  .therapy-name,
+  .therapy-title {
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    max-width: 65%;
+  }
+
+  .therapy-btn,
+  .book-now-btn {
+    min-width: 110px;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+  }
+/* WHY DELIZA */
+
+   .why-section {
+    padding: 56px 24px 50px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.5fr;
+    gap: 16px;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .why-cards-col {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+  }
+
+  .why-card {
+    min-height: 220px;
+    padding: 22px 18px;
+    box-sizing: border-box;
+  }
+
+  .why-card h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .why-image-col {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .why-img {
+    width: 100%;
+    height: 100%;
+    min-height: 462px;     /* image height equal feel */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .why-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  /* Location */
+   .locations-section {
+    padding: 36px 16px;
+    overflow: hidden;
+  }
+
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .loc-divider {
+    display: none !important;
+  }
+
+  .loc-col {
+    width: 100%;
+    min-width: 0;
+    min-height: 230px;
+    padding: 20px 16px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    background: transparent;
+    border: none;
+  }
+
+.locations-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 28px) top,
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 28px) bottom,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 28px) left,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 28px) right;
+
+  background-size:
+    100% 2px,
+    100% 2px,
+    2px 100%,
+    2px 100%;
+
+  background-repeat: no-repeat;
+}
+
+.loc-col::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #b9c0b8 0 14px,
+    transparent 14px 28px
+  );
+  pointer-events: none;
+}
+
+
+  .loc-city {
+    font-size: 26px;
+    line-height: 1.08;
+    margin-bottom: 8px;
+  }
+
+  .loc-region {
+    font-size: 11px;
+    margin-bottom: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .loc-addr {
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .loc-contact,
+  .loc-map {
+    font-size: 11px;
+    line-height: 1.4;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .open {
+    font-size: 24px;
+    line-height: 1.15;
+    margin-top: 28px;
+  }
+
+  /* REVIEWS */
+  .reviews-section { padding: 60px 0 50px; }
+  .reviews-slider { padding: 0 16px; }
+  .reviews-track { gap: 20px; }
+
+  .review-card {
+    width: 280px;
+    min-height: 200px;
+    padding: 20px 18px;
+  }
+
+  .review-text {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .review-user img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .review-name {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .review-source { font-size: 10px; }
+  .stars { font-size: 12px; }
+}
+
+  .booking-info .info-line p {
+    font-size: 10px;  
+    font-weight: 800;
+  }
+
+
+
+
+/* ============================================================
+   3. TABLET (481px – 768px)
+   ============================================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+   html, body {
+    overflow-x: hidden;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+     width: calc(100% - 28px);
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 18px;
+    height: 58px;
+    border-radius: 24px;
+    box-sizing: border-box;
+  }
+
+  .logo { margin-left: 0; }
+  .logo-img { height: 34px; }
+
+  .nav-links {
+      display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;                  /* navbar கீழே */
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 60px);   /* equal side gap */
+    max-width: 470px;           /* tablet proper width */
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 18px 22px 20px;
+    gap: 0;
+    box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+    animation: slideDown 0.22s ease forwards;
+  }
+
+  .nav-links li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .nav-links li a {
+    font-size: 0.95rem;
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    color: #1a2e1a;
+  }
+
+  .nav-links li:last-child a { border-bottom: none; }
+
+  .mobile-book {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+  }
+
+  .mobile-book-btn {
+    display: block;
+    width: 50%;
+    text-align: center;
+    background: #102E16;
+    color: #fff !important;
+    padding: 13px 0;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1.5px solid #102E16;
+  }
+
+  .mobile-book-btn:hover {
+    background: transparent;
+    color: #102E16 !important;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 4px;
+    padding: 6px;
+    z-index: 1001;
+  }
+
+  .btn-book { display: none !important; }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--green-dark);
+    transition: transform 0.28s ease, opacity 0.2s ease;
+  }
+
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* HERO */
+  .hero {
+     position: relative;
+    min-height: 100svh;
+    height: 100svh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  
+  .hero-bg {
+    background-image: url("./images/hero1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 72% center; /* left center remove */
+    z-index: 0;
+    transform: translateZ(0); /* seam reduce */
+  }
+.hero-bg,
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-overlay {
+    background: linear-gradient(
+      160deg,
+      rgba(10,18,12,0.90) 0%,
+      rgba(10,18,12,0.75) 40%,
+      rgba(10,18,12,0.40) 75%,
+      rgba(10,18,12,0.20) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
+    padding: 92px 24px 32px;
+    margin-top: 50px;
+    box-sizing: border-box;
+  }
+
+  .hero-h1 {
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-pills {
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .hero-body {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 460px;
+  }
+
+  .hero-ctas {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline,
+  .btn-filled {
+     min-width: 140px;     
+    height: 48px;         
+    padding: 0 16px;      
+    font-size: 12px;      
+    border-radius: 12px;  
+  }
+
+  /* FLOATING CONTACT */
+  .floating-contact a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-contact a i { font-size: 17px; }
+
+  /* AIRPORT */
+  .airport-section { padding: 30px 20px 36px; }
+
+  .airport-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 32px 28px;
+    gap: 22px;
+    min-height: auto;
+  }
+
+  .airport-divider { display: none !important; }
+
+  .airport-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .airport-left h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    text-align: center;
+  }
+
+  .airport-right {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .airport-right p {
+    text-align: center;
+    font-size: clamp(15px, 2.5vw, 18px);
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
+  /* MAGIC */
+  .magic-section { padding: 24px 24px 40px; }
+  .magic-title { font-size: clamp(22px, 6vw, 42px); }
+  .marquee-track { animation: marqueeFix 28s linear infinite; }
+
+  /* OFFER */
+  .offer-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .offer-strip {
+    width: 100%;
+    overflow: hidden;
+    background: #013813;
+    padding: 8px 0;
+    white-space: nowrap;
+  }
+
+  .offer-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    animation: scrollOfferMobile 28s linear infinite;
+  }
+
+  .offer-track span {
+    padding: 0 10px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .offer-track span:first-child { padding-left: 0; }
+  .offer-track span:last-child { padding-right: 0; }
+
+  .offer-section,
+  .offer-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* THERAPIES */
+  .therapies-section {
+    padding: 36px 0 44px;
+  }
+
+  .therapy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 18px;
+    padding: 0 24px;
+    margin: 32px auto 24px;
+    align-items: start;
+  }
+
+  .therapy-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .therapy-img {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .therapy-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .therapy-card:nth-child(3) {
+    grid-column: 1 / span 2;
+    width: 100%;
+    max-width: 420px;   /* center card size */
+    justify-self: center;
+  }
+
+  .therapy-overlay,
+  .therapy-info,
+  .therapy-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 56px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background: rgba(10, 45, 20, 0.445);
+    backdrop-filter: blur(6px);
+  }
+
+  .therapy-name,
+  .therapy-title {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #fff;
+    margin: 0;
+  }
+
+  .therapy-btn,
+  .book-now-btn {
+    min-width: 120px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+  }
+
+  /* WHY DELIZA */
+  .why-section { padding: 50px 20px 44px; }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 24px;
+    justify-items: center;
+  }
+
+  .why-image-col {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* 🔥 center */
+    margin: 0 auto;
+  }
+
+  .why-img {
+     width: 100%;
+    max-width: 380px;   /* 🔥 size control (main) */
+    height: 260px;      /* 🔥 reduce height */
+    object-fit: cover;  /* 🔥 crop clean */
+    /* border-radius: 10px; */
+    margin: 0 auto;
+  }
+
+  .why-cards-col {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 20px;
+    width: 100%;
+  }
+
+  .why-card {
+    width: 100%;
+    min-height: auto;
+    padding: 20px 18px;
+  }
+
+  .why-card h4 { font-size: 14px; }
+
+  .why-card p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* PACKAGES */
+  .packages-section { padding: 44px 18px; }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 0 12px;
+    align-items: start;
+  }
+
+  .pkg-card {
+    padding: 20px 14px;
+    min-height: auto;
+  }
+
+  .pkg-card:nth-child(3) {
+    grid-column: 1 / span 2;
+    max-width: 330px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* LOCATIONS */
+  .locations-section {
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* 🔥 3 columns */
+  gap: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.loc-divider {
+  display: none !important;
+}
+
+.loc-col {
+  width: 100%;
+  min-width: 0;
+  min-height: 250px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  background: transparent;
+}
+
+/* dashed border create pannum */
+.locations-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 28px) top,
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 28px) bottom,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 28px) left,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 28px) right;
+
+  background-size:
+    100% 2px,
+    100% 2px,
+    2px 100%,
+    2px 100%;
+
+  background-repeat: no-repeat;
+}
+
+
+
+/* right side final border */
+.loc-col::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #b9c0b8 0 14px,
+    transparent 14px 28px
+  );
+  pointer-events: none;
+}
+
+.loc-city {
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.loc-region {
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.loc-addr {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.loc-contact,
+.loc-map {
+  font-size: 12px;
+  gap: 10px;
+}
+
+.open {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-top: 40px;
+}
+  /* REVIEWS */
+  .reviews-section { padding: 60px 0 50px; }
+  .reviews-slider { padding: 0 16px; }
+  .reviews-track { gap: 20px; }
+
+  .review-card {
+    width: 280px;
+    min-height: 200px;
+    padding: 20px 18px;
+  }
+
+  .review-text {
+    font-size: 11.5px;
+    line-height: 1.5;
+  }
+
+  .review-user img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .review-name {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .review-source { font-size: 10px; }
+  .stars { font-size: 12px; }
+
+  /* CTA */
+  .cta-section { padding: 54px 24px 30px; }
+  .cta-heading { font-size: clamp(24px, 7vw, 44px); }
+  .cta-text {
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 1.7;
+  }
+
+  /* BOOKING */
+  .booking-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .booking-layout::after { display: none; }
+
+  .booking-form-wrap { padding: 36px 30px; }
+
+  .booking-info {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 28px 30px 40px;
+    margin-top: 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .info-line { flex: 0 0 calc(50% - 10px); }
+}
+
+.site-footer {
+  background: #f6f6f3;
+  overflow: hidden;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  align-items: stretch;
+  border-top: 1px solid #d9ddd6;
+  border-bottom: 1px solid #d9ddd6;
+}
+
+.footer-brand,
+.footer-col,
+.footer-contact {
+  border-right: 1px solid #d9ddd6;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.footer-contact {
+  border-right: none;
+}
+
+/* LEFT SIDE */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* 🔥 changed */
+  padding: 0;
+}
+
+.footer-brand-top {
+  padding: 24px 20px 18px;       /* 🔥 adjusted */
+  border-bottom: 1px solid #d9ddd6;
+}
+
+.footer-logo {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.footer-logo-sub {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5f695f;
+  margin: 0;                     /* 🔥 added */
+}
+
+/* FOLLOW */
+.footer-social-wrap {
+  padding: 18px 20px 22px;       /* 🔥 adjusted */
+  margin-top: 0;                 /* 🔥 added */
+  text-align: center;
+}
+
+.footer-social-title {
+  font-size: 18px;
+  margin-bottom: 25px; 
+  text-align: center;            /* 🔥 adjusted */
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-left: 0;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+}
+/* NAV / TREAT / CONTACT */
+.footer-col,
+.footer-contact {
+  padding: 24px 20px;
+}
+
+.footer-col h3,
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.footer-col a,
+.f-contact li {
+  font-size: 12px;
+}
+
+.f-contact {
+  gap: 10px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px 20px;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-bottom-links a {
+  font-size: 11px;
+}
+
+
+
+/* ============================================================
+   4. MOBILE (0px – 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  /* NAVBAR */
+  .navbar {
+    width: calc(100% - 24px);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 54px;
+    padding: 0 16px;
+    border-radius: 22px;
+  }
+
+  .logo { margin-left: 0; }
+  .logo-img { height: 30px; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 340px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 14px 16px;
+    gap: 0;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+    z-index: 998;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+  }
+
+  .nav-links li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+   .nav-links li a {
+    display: block;
+    padding: 14px 0;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    color: #17311d;
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .mobile-book {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+  }
+
+   .mobile-book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    min-height: 56px;
+    background: #102E16;
+    color: #fff !important;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    border: 1.5px solid #102E16;
+  }
+
+  .mobile-book-btn:hover {
+    background: transparent;
+    color: #102E16 !important;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 4px;
+    padding: 6px;
+    z-index: 1001;
+  }
+
+  .btn-book { display: none !important; }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--green-dark);
+    transition: transform 0.28s ease, opacity 0.2s ease;
+  }
+
+  .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* HERO */
+  .hero {
+     min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 110px
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('./images/hero1.png') no-repeat left center;
+    background-size: cover;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      160deg,
+      rgba(10,18,12,0.90) 0%,
+      rgba(10,18,12,0.75) 40%,
+      rgba(10,18,12,0.40) 75%,
+      rgba(10,18,12,0.20) 100%
+    );
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  .hero-h1 {
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1.08;
+    letter-spacing: 0.02em;
+    margin: 0 0 18px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+    margin-bottom: 18px;
+  }
+
+  .hero-body {
+    font-size: 14px;
+    line-height: 1.75;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    max-width: 100%;
+    min-width: unset;
+    width: auto;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    padding: 11px 18px;
+  }
+
+  .btn-filled.large {
+    font-size: 13px;
+    padding: 14px 4px;
+  }
+
+  /* FLOATING CONTACT */
+  .floating-contact a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-contact a i { font-size: 17px; }
+
+  /* AIRPORT */
+  .airport-section { padding: 20px 16px 28px; }
+
+  .airport-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 24px 18px;
+    gap: 18px;
+    min-height: auto;
+  }
+
+  .airport-divider { display: none !important; }
+
+  .airport-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .airport-left h2 {
+    font-size: clamp(24px, 7vw, 32px);
+    text-align: center;
+  }
+
+  .airport-right {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .airport-right p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+
+  /* MAGIC */
+  .magic-section { padding: 20px 16px 32px; }
+  .magic-title { font-size: clamp(20px, 7.5vw, 32px); }
+  .marquee-track { animation: marqueeFix 28s linear infinite; }
+
+  /* OFFER */
+  .offer-wrap {
+    width: 100%;
+    padding: 8px 0;
+    margin: 24px 0;
+    overflow: hidden;
+  }
+
+  .offer-strip {
+    width: 100%;
+    overflow: hidden;
+    background: #013813;
+    padding: 6px 0;
+    white-space: nowrap;
+  }
+
+  .offer-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    animation: scrollOfferMobile 30s linear infinite;
+  }
+
+  .offer-track span {
+    padding: 0 6px;
+    font-size: 16px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .offer-track span:first-child { padding-left: 0; }
+  .offer-track span:last-child { padding-right: 0; }
+
+  .offer-section,
+  .offer-container {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* THERAPIES */
+  .therapy-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 10px;
+    margin: 36px auto 24px;
+  }
+
+  .therapy-card {
+    width: 100%;
+    max-width: 230px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .therapy-img {
+    width: 100%;
+    height: 295px;
+    overflow: hidden;
+  }
+    
+  .center-btn { margin-top: 20px; }
+
+   .therapy-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .therapy-overlay,
+  .therapy-info,
+  .therapy-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #234a2c 0%, #355f39 55%, #2a4f31 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    box-sizing: border-box;
+  }
+
+
+  .therapy-name,
+  .therapy-title {
+    color: #fff;
+    font-size: 7px;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+  }
+
+    .therapy-btn,
+  .book-now-btn {
+    background: #fff;
+    color: #111;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    line-height: 1;
+    min-height: auto;
+    width: auto;
+  }
+
+  /* WHY DELIZA */
+ .why-section {
+    padding: 28px 16px 32px !important;
+    overflow: hidden;
+  }
+
+  .why-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  .why-image-col {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 270px !important;
+    margin: 0 auto !important;
+    overflow: hidden !important;
+  }
+
+  .why-img {
+    width: 100% !important;
+    height: 320px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+  }
+
+  .why-cards-col {
+    order: 2 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 270px !important;
+    margin: 0 auto !important;
+  }
+
+  .why-card {
+    width: 100% !important;
+    min-height: 108px !important;
+    padding: 14px 10px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #b7c1b6 !important;
+    background: transparent !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .why-icon {
+    width: 22px !important;
+    height: 22px !important;
+    margin-bottom: 10px !important;
+    border-radius: 50% !important;
+    background: #10361d !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .why-card h4 {
+    font-size: 10px !important;
+    line-height: 1.35 !important;
+    margin: 0 0 6px !important;
+  }
+
+  .why-card p {
+    font-size: 7px !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+  }
+
+
+  /* PACKAGES */
+  .packages-section { padding: 32px 14px; }
+
+  .packages-section .section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+    color: #102E16;
+    line-height: 1.2;
+  }
+
+  .packages-section .section-label .label-bar {
+    width: 8px;
+    height: 16px;
+    background: #6b7a6b;
+    display: inline-block;
+  }
+
+  .packages-section .section-heading {
+    font-size: 26px;
+    line-height: 1.15;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .packages-section .section-sub {
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 260px;
+    margin: 0 auto 22px;
+    padding: 0;
+    color: #6b7a6b;
+  }
+
+  .best-seller-label {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  .packages-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px;
+    justify-items: center;
+    padding: 0;
+  }
+
+  .pkg-card,
+  .pkg-card:nth-child(3) {
+    grid-column: auto !important;
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 14px 10px;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  /* LOCATIONS */
+  .locations-section {
+    padding: 34px 14px !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .locations-section::before,
+  .locations-section::after,
+  .locations-grid::before,
+  .locations-grid::after,
+  .loc-col::before,
+  .loc-col::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  .locations-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    align-items: start !important;
+  }
+
+  .loc-divider { display: none !important; }
+
+  .loc-col {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 160px !important;
+    padding: 14px 12px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: 1px dashed #c9cec5 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    position: relative;
+  }
+
+  .locations-grid > .loc-col:last-of-type {
+    grid-column: 1 / span 2 !important;
+    max-width: 210px !important;
+    width: 100% !important;
+    min-height: 145px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+  }
+
+  .loc-city {
+    font-size: 16px !important;
+    line-height: 1.12 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .loc-region {
+    font-size: 8px !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .loc-addr {
+    font-size: 7px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .loc-contact,
+  .loc-map {
+    font-size: 7px !important;
+    line-height: 1.35 !important;
+    gap: 6px !important;
+    margin-bottom: 6px !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+  }
+
+  .open {
+    font-size: 15px !important;
+    line-height: 1.15 !important;
+    margin-top: 8px !important;
+  }
+
+  /* REVIEWS */
+  .reviews-section { padding: 34px 0 40px; }
+
+  .section-label {
+    font-size: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .label-bar {
+    width: 4px;
+    height: 12px;
+  }
+
+  .reviews-heading {
+    font-size: 18px;
+    line-height: 1.3;
+    padding: 0 16px;
+    margin-bottom: 0;
+  }
+
+  .reviews-slider {
+    top: 24px;
+    padding: 0 8px;
+    overflow: hidden;
+  }
+
+  .reviews-track { gap: 10px; }
+
+  .review-card {
+    width: 200px;
+    min-height: 140px;
+    padding: 10px 10px;
+  }
+
+  .stars {
+    font-size: 8px;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  .review-text {
+    font-size: 8px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .review-user {
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .review-user img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .review-name {
+    font-size: 9px;
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+
+  .review-source {
+    font-size: 7px;
+    line-height: 1.2;
+  }
+  .reviews-track {
+    gap: 10px;             /* 🔥 small gap */
+  }
+
+  /* CTA */
+  .cta-section { padding: 40px 16px 24px; }
+  .cta-heading { font-size: clamp(22px, 8vw, 36px); }
+  .cta-text { font-size: 13px; }
+
+  /* BOOKING */
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .booking-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    justify-content: center !important;
+  }
+
+  .booking-layout::after { display: none !important; }
+
+  .booking-form-wrap { padding: 28px 20px; }
+
+  .booking-title { font-size: 30px; }
+  .booking-subtitle { font-size: 13px; }
+
+  .confirm-btn {
+    height: 46px;
+    font-size: 12px;
+  }
+
+  .instant-actions {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+   .booking-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 20px;
+
+    width: 90%;
+    max-width: 330px;
+    margin: 0 auto;
+
+    padding: 24px 20px;
+    /* background: #063b1c;       🔥 dark green */
+    box-sizing: border-box;
+  }
+
+  .booking-info .info-line {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .booking-info .info-line p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.9);
+    text-align: left;
+  }
+
+  /* ICON FIX */
+  .booking-info .info-line i,
+  .booking-info .info-icon-img {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* FOOTER */
+ .site-footer {
+    overflow: hidden;
+    background: #f6f6f3;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    border-top: 1px solid #d9ddd6;
+    border-bottom: 1px solid #d9ddd6;
+  }
+
+  .footer-brand {
+    display: contents;
+  }
+
+  /* 1. Brand top */
+  .footer-brand-top {
+    grid-column: 1 / -1;
+    order: 1;
+    text-align: center;
+    padding: 26px 18px 22px;
+    border-bottom: 1px solid #d9ddd6;
+  }
+
+  .footer-logo {
+    font-size: 34px;
+    line-height: 1;
+    margin: 0 0 8px;
+    color: #16321d;
+  }
+
+  .footer-logo-sub {
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin: 0 0 10px;
+    color: #6c756c;
+  }
+
+  .footer-desc {
+    max-width: 255px;
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 1.55;
+    color: #6b746a;
+  }
+
+  /* 2. Navigate */
+  .footer-grid > .footer-col:nth-child(2) {
+    grid-column: 1 / 2;
+    order: 2;
+    padding: 24px 14px;
+    text-align: center;
+    border-right: 1px solid #d9ddd6;
+    border-bottom: 1px solid #d9ddd6;
+  }
+
+  /* 3. Treatments */
+  .footer-grid > .footer-col:nth-child(3) {
+    grid-column: 2 / 3;
+    order: 3;
+    padding: 24px 14px;
+    text-align: center;
+    border-bottom: 1px solid #d9ddd6;
+  }
+
+  .footer-col h3,
+  .footer-contact h3,
+  .footer-social-title {
+    margin: 0 0 16px;
+    font-size: 16px;
+    color: #17311d;
+    text-align: center;
+  }
+
+  .footer-col ul,
+  .f-contact {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-col li {
+    margin: 0 0 12px;
+  }
+
+  .footer-col li:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-col a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #5f695f;
+  }
+
+  /* 4. Contact */
+  .footer-grid > .footer-contact:nth-child(4) {
+    grid-column: 1 / -1;
+    order: 4;
+    padding: 22px 16px;
+    text-align: center;
+    border-bottom: 1px solid #d9ddd6;
+  }
+
+  .f-contact li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* margin: 0 0 10px; */
+    font-size: 12px;
+    line-height: 1.45;
+    color: #5f695f;
+     margin-bottom: 8px !important;
+  }
+
+  .f-contact li:last-child {
+    margin-bottom: 0;
+  }
+
+  .f-contact i {
+    font-size: 12px;
+    color: #17311d;
+  }
+
+  .footer-contact {
+    padding: 18px 14px !important;   /* 🔥 reduce space */
+    min-height: auto !important;     /* 🔥 remove fixed height */
+    margin: 0 !important;
+  }
+
+  /* 5. Follow us */
+  .footer-social-wrap {
+    grid-column: 1 / -1;
+    order: 5;
+    text-align: center;
+    padding: 18px 14px 20px !important;
+    border-bottom: 1px solid #d9ddd6;
+    margin-top: 0 !important;
+  }
+
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-left: 0;
+  }
+
+  .footer-socials a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d9ddd6;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #17311d;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  /* 6. Bottom */
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 12px 14px;
+  }
+
+  .footer-bottom p {
+    display: none;
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 8px;
+    text-decoration: none;
+    color: #7a827a;
+  }
+}
+
+/* ============================================================
+   SHARED ANIMATIONS / HOVER
+   ============================================================ */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes marqueeFix {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollOfferMobile {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.btn-filled:hover {
+  background: var(--white);
+  color: black;
+}
+/* ============================================================
+   WHY DELIZA — CLEAN FINAL FIX
+============================================================ */
+@media (min-width: 1366px) and (max-width: 1440px) {
+
+  .why-section {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 20px;   
+  padding: 180px 20px 90px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 700px 470px;
+    gap: 40px; /* 🔥 little increase */
+    align-items: start;
+  }
+
+  .why-cards-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 remove fixed width */
+    gap: 32px;
+  }
+
+  .why-card {
+    width: 100%;              /* 🔥 fix */
+    min-height: 300px;
+    padding: 38px 34px;
+    box-sizing: border-box;
+    border: 1.5px solid rgba(34, 64, 45, 0.35); /* 🔥 smooth border */
+    background: #f8f8f8;
+    /* box-shadow: inset 0 0 0 1.5px rgba(34, 64, 45, 0.4); */
+  }
+
+  .why-image-col {
+    width: 100%;              /* 🔥 remove fixed width */
+    height: 620px;
+    overflow: hidden;
+  }
+
+  .why-img {
+    width: 100%;
+    height: 100%;
+    min-height: 620px;
+    background-size: cover;
+    background-position: center;
+  }
+  .why-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.5px;
+  background: #7a8f7c;
+
+}
