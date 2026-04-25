@@ -32,7 +32,7 @@ section {
    All other breakpoints remain untouched.
    ============================================================ */
 
-@media (min-width: 1366px) and (max-width: 1440px) {
+@media (min-width: 1366px) and (max-width: 1500px) {
 
   /* ──────────────────────────────────────────
      NAVBAR
