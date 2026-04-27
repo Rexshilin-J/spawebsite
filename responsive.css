@@ -2839,23 +2839,23 @@ margin: 0 auto;
   }
 
  .btn-outline,
-  .btn-filled,
-  .btn-filled.large {
-    width: 270px !important;      /* rendu button same width */
-    min-width: 270px !important;
-    max-width: 270px !important;
-
-    height: 62px !important;      /* rendu button same height */
-    min-height: 62px !important;
-
-    padding: 0 18px !important;
-    border-radius: 12px !important;
-
-    font-size: 12px !important;
-    letter-spacing: 0.14em;
-    display: flex;
-    align-items: center;
+  .btn-filled {
+     min-width: 190px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    text-align: center;
     justify-content: center;
+    font-size: 12px;
+    padding: 17px 26px;
+    border-radius: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .btn-filled.large {
+     min-width: 210px;
+    font-size: 13px;
+    padding: 18px 28px;
   }
 
   /* FLOATING CONTACT */
