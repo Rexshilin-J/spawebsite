@@ -2781,8 +2781,8 @@ margin: 0 auto;
   .hero-bg {
      position: absolute;
     inset: 0;
-    background: url('./images/index.svg') no-repeat 66% center;
-    background-size: cover;
+    background: url('./images/index.svg') no-repeat 85% center !important;
+    background-size: cover !important;
   }
 
   .hero-overlay {
@@ -2801,10 +2801,12 @@ margin: 0 auto;
     margin: 0;
     position: relative;
     z-index: 2;
+    max-width: 95% !important;
+    padding-left: 20px !important;
   }
 
   .hero-h1 {
-    font-size: clamp(28px, 8vw, 34px) !important;
+     font-size: clamp(28px, 8vw, 34px) !important;
     line-height: 1.08 !important;
     letter-spacing: 0.02em !important;
     max-width: 100% !important;
