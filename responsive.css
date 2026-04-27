@@ -2810,13 +2810,13 @@ margin: 0 auto;
   }
 
   .hero-h1 {
-   font-size: 32px;
-    line-height: 1.08;
-
-    max-width: 260px;
-
-    /* 👇 இது தான் fix */
-    margin-left: auto;
+     font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.02em !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+    margin: 0 0 24px !important;
   }
 
   .hero-pills {
@@ -2824,8 +2824,6 @@ margin: 0 auto;
     flex-wrap: nowrap;
     gap: 14px;
     margin-bottom: 30px;
-    margin-left: auto;
-    max-width: 260px;
 
   }
   .hero-pill,
@@ -2839,8 +2837,6 @@ margin: 0 auto;
    font-size: 15px;
     line-height: 1.7;
     margin-bottom: 28px;
-    max-width: 260px;
-    margin-left: auto;
     max-width: 260px;
   }
 
