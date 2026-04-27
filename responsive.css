@@ -2775,13 +2775,14 @@ margin: 0 auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
+     
   }
   
 
   .hero-bg {
      position: absolute;
     inset: 0;
-    background: url('./images/index.svg') no-repeat 85% center !important;
+    background: url('./images/index.svg') no-repeat 65% center !important;
     background-size: cover !important;
   }
 
@@ -2813,6 +2814,7 @@ margin: 0 auto;
     width: 100% !important;
     white-space: nowrap !important;
     margin: 0 0 24px !important;
+     top:24px;
   }
 
   .hero-pills {
