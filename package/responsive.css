@@ -31,6 +31,55 @@ section,
 *::after {
   box-sizing: border-box;
 }
+   /* ============================================================
+   4K HERO EXACT FIX — 2560px screen
+   paste at VERY END
+   ============================================================ */
+@media (min-width: 1441px) {
+ .navbar {
+   height: 82px;
+    width: calc(100% - 58px);
+    max-width: 24000px;
+    top: 22px;
+    padding: 0 24px;
+    border-radius: 30px;                      /* reset base so em units scale up */
+  }
+
+  .navbar.scrolled {
+    top: 10px;
+  }
+
+  .logo {
+      margin-left: 18px;
+  }
+
+  .logo-img {
+    height: 64px;                        /* bigger logo — was 40px */
+  }
+
+  /* Nav links */
+  .nav-links {
+    gap: 34px;
+    font-size: 1em;          
+    align-items: center;            /* reset */
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    font-weight: 800;
+  }
+
+  /* Book button */
+  .btn-book {
+    padding: 14px 26px;
+    font-size: 15px;
+    border-radius: 14px;
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+}
 
 /* ============================================================
    1. NAVBAR — EXACTLY LIKE TREATMENT PAGE
@@ -1558,6 +1607,17 @@ section,
    MOBILE 0px - 480px
    ========================= */
 @media (max-width: 480px) {
+
+   .floating-contact {
+    top: 92px;
+  }
+
+  .floating-contact a {
+    width: 48px;
+    height: 48px;
+    font-size: 17px;
+  }
+
   
     /* FOOTER */
  .site-footer {
