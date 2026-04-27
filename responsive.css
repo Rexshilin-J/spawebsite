@@ -2806,8 +2806,8 @@ margin: 0 auto;
 
   .hero-h1 {
    font-size: clamp(34px, 9vw, 46px);  /* size reduce */
-  line-height: 1.1;
-  max-width: 260px;   /* 🔥 முக்கியம் – 2 lines control */
+  line-height: 1;
+  max-width: 280px;   /* 🔥 முக்கியம் – 2 lines control */
   word-break: normal;
   }
 
