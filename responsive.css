@@ -2775,14 +2775,13 @@ margin: 0 auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
-     
   }
   
 
   .hero-bg {
      position: absolute;
     inset: 0;
-    background: url('./images/index.svg') no-repeat 65% center !important;
+    background: url('./images/index.svg') no-repeat 85% center !important;
     background-size: cover !important;
   }
 
@@ -2797,24 +2796,27 @@ margin: 0 auto;
   }
 
   .hero-content {
-     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 100vh;
+
     padding: 90px 20px 30px;
-    margin: 0;
-    position: relative;
-    z-index: 2;
-    max-width: 95% !important;
-    padding-left: 20px !important;
+
+    /* 👇 முக்கியம் */
+    max-width: 100%;
   }
 
   .hero-h1 {
-     font-size: clamp(28px, 8vw, 34px) !important;
-    line-height: 1.08 !important;
-    letter-spacing: 0.02em !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    white-space: nowrap !important;
-    margin: 0 0 24px !important;
-     top:24px;
+   font-size: 32px;
+    line-height: 1.08;
+
+    max-width: 260px;
+
+    /* 👇 இது தான் fix */
+    margin-left: auto;
   }
 
   .hero-pills {
@@ -2822,6 +2824,8 @@ margin: 0 auto;
     flex-wrap: nowrap;
     gap: 14px;
     margin-bottom: 30px;
+    margin-left: auto;
+    max-width: 260px;
 
   }
   .hero-pill,
@@ -2835,6 +2839,8 @@ margin: 0 auto;
    font-size: 15px;
     line-height: 1.7;
     margin-bottom: 28px;
+    max-width: 260px;
+    margin-left: auto;
     max-width: 260px;
   }
 
