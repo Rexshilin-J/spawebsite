@@ -430,6 +430,15 @@ section,
     text-transform: uppercase;
     text-align: center;
   }
+
+    .floating-contact {
+    top: 120px;
+  }
+
+  .floating-contact a {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 /* ============================================================
@@ -1600,32 +1609,13 @@ section,
   font-size: 11px;
   color: #ffffff;
 }
-   .floating-contact {
-    top: 92px;
-  }
 
-  .floating-contact a {
-    width: 48px;
-    height: 48px;
-    font-size: 17px;
-  }
 }
 
 /* =========================
    MOBILE 0px - 480px
    ========================= */
 @media (max-width: 480px) {
-
-   .floating-contact {
-    top: 92px;
-  }
-
-  .floating-contact a {
-    width: 48px;
-    height: 48px;
-    font-size: 17px;
-  }
-
   
     /* FOOTER */
  .site-footer {
