@@ -1600,7 +1600,15 @@ section,
   font-size: 11px;
   color: #ffffff;
 }
+   .floating-contact {
+    top: 92px;
+  }
 
+  .floating-contact a {
+    width: 48px;
+    height: 48px;
+    font-size: 17px;
+  }
 }
 
 /* =========================
