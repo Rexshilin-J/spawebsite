@@ -2827,29 +2827,34 @@ margin: 0 auto;
   }
 
   .hero-body {
-   font-size: 17px;
-    line-height: 1.9;
-    max-width: 355px;
-    margin-bottom: 64px;
+   font-size: 16px;
+    line-height: 1.75;
+    max-width: 330px;
+    margin-bottom: 42px;
   }
 
   .hero-ctas {
-   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+   gap: 16px;
+    width: 100%;
   }
 
-   .btn-outline,
+ .btn-outline,
   .btn-filled,
   .btn-filled.large {
-    width: 100%;
-    max-width: 390px;
-    min-height: 68px;
-    padding: 18px 24px;
-    border-radius: 14px;
-    font-size: 14px;
-    letter-spacing: 0.16em;
+    width: 270px !important;      /* rendu button same width */
+    min-width: 270px !important;
+    max-width: 270px !important;
+
+    height: 62px !important;      /* rendu button same height */
+    min-height: 62px !important;
+
+    padding: 0 18px !important;
+    border-radius: 12px !important;
+
+    font-size: 12px !important;
+    letter-spacing: 0.14em;
+    display: flex;
+    align-items: center;
     justify-content: center;
   }
 
