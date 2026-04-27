@@ -2835,26 +2835,26 @@ margin: 0 auto;
 
   .hero-ctas {
    display: flex;
-  flex-direction: column;   /* 🔥 vertical stack */
-  align-items: center;      /* center align */
+  flex-direction: column;
+  align-items: flex-start;  /* left side */
   gap: 14px;
   width: 100%;
   }
 .btn-outline,
 .btn-filled,
 .btn-filled.large {
-  width: 260px;          /* same width */
-  height: 56px;          /* same height */
+ width: 230px;       
+  height: 54px;
+  padding: 0;
+  border-radius: 12px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 0;            /* remove uneven padding */
-  border-radius: 12px;
-
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.14em;
+}
 }
 
   /* FLOATING CONTACT */
