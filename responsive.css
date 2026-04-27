@@ -2770,14 +2770,13 @@ margin: 0 auto;
   .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* HERO */
+ 
   .hero {
- min-height: 100vh;
-    height: auto;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 96px;
-    overflow: hidden
   }
+  
 
   .hero-bg {
      position: absolute;
@@ -2798,17 +2797,18 @@ margin: 0 auto;
 
   .hero-content {
      width: 100%;
-    padding: 90px 20px 40px;
+    padding: 90px 20px 30px;
     margin: 0;
     position: relative;
     z-index: 2;
   }
 
   .hero-h1 {
-   font-size: clamp(34px, 9vw, 46px);  /* size reduce */
-  line-height: 1;
-  max-width: 280px;   /* 🔥 முக்கியம் – 2 lines control */
-  word-break: normal;
+    font-size: 32px;          /* size reduce */
+    line-height: 1.1;
+    max-width: 260px;         /* width control */
+    
+    word-break: keep-all;
   }
 
   .hero-pills {
@@ -2826,10 +2826,10 @@ margin: 0 auto;
   }
 
   .hero-body {
-   font-size: 16px;
-    line-height: 1.75;
-    max-width: 330px;
-    margin-bottom: 30px;
+   font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 260px;
   }
 
   .hero-ctas {
