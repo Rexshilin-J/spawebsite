@@ -2804,11 +2804,13 @@ margin: 0 auto;
   }
 
   .hero-h1 {
-    font-size: 32px;          /* size reduce */
-    line-height: 1.1;
-    max-width: 260px;         /* width control */
-    
-    word-break: keep-all;
+    font-size: clamp(28px, 8vw, 34px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.02em !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    white-space: nowrap !important;
+    margin: 0 0 24px !important;
   }
 
   .hero-pills {
