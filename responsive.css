@@ -25,6 +25,819 @@ section {
   overflow-x: hidden;
 }
 
+/* ============================================================
+   4K HERO EXACT FIX — 2560px screen
+   paste at VERY END
+   ============================================================ */
+@media (min-width: 1441px) {
+ .navbar {
+   height: 82px;
+    width: calc(100% - 58px);
+    max-width: 24000px;
+    top: 22px;
+    padding: 0 24px;
+    border-radius: 30px;                      /* reset base so em units scale up */
+  }
+
+  .navbar.scrolled {
+    top: 10px;
+  }
+
+  .logo {
+      margin-left: 18px;
+  }
+
+  .logo-img {
+    height: 64px;                        /* bigger logo — was 40px */
+  }
+
+  /* Nav links */
+  .nav-links {
+    gap: 34px;
+    font-size: 1em;          
+    align-items: center;            /* reset */
+  }
+
+  .nav-links a {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    font-weight: 800;
+  }
+
+  /* Book button */
+  .btn-book {
+    padding: 14px 26px;
+    font-size: 15px;
+    border-radius: 14px;
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+
+  /* ──────────────────────────────────────────
+     HERO SECTION
+  ────────────────────────────────────────── */
+ .hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-content {
+  max-width: 1500px;
+  padding-top: 0 !important;
+  margin-top: 170px !important;   /* 🔥 text keela varum */
+}
+
+.hero-h1 {
+  font-size: clamp(50px, 4.5vw, 100px);
+  max-width: 800px;
+  line-height: 1.2;
+}
+
+  .hero-pills {
+    gap: 60px;
+    margin-bottom: 18px;
+  }
+
+  /* Pills — Relax · Renew · Rejuvenate */
+  .hero-pill,
+  .pill {
+    font-size: 25px;
+  }
+
+  .hero-body {
+    font-size: 20px;
+    line-height: 1.9;
+    max-width: 540px;
+    margin-bottom: 24px;
+  }
+
+  .hero-ctas {
+    gap: px;
+    margin-top: 28px;
+  }
+
+  /* CTA Buttons */
+  .btn-filled,
+  .btn-outline {
+    height: 54px;
+    padding: 0 32px;
+    font-size: 16px;
+    border-radius: 14px;
+    min-width: 170px;
+    letter-spacing: 0.09em;
+    margin-top: 30px;
+  }
+
+  /* ──────────────────────────────────────────
+  Airport section
+────────────────────────────────────────── */
+
+
+   .airport-section {
+    padding: 90px 40px 110px !important;
+  }
+
+  .airport-box {
+    max-width: 1780px !important;
+    min-height: 360px !important;
+    padding: 70px 110px !important;
+    margin: 0 auto !important;
+  }
+
+  .airport-left h2 {
+    font-size: 72px !important;
+    line-height: 1.22 !important;
+  }
+
+  .airport-right p {
+    font-size: 28px !important;
+    line-height: 1.6 !important;
+    max-width: 620px !important;
+  }
+
+  .airport-box::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+
+  background:
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 24px) top,
+    repeating-linear-gradient(to right, #b9c0b8 0 14px, transparent 14px 24px) bottom,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 24px) left,
+    repeating-linear-gradient(to bottom, #b9c0b8 0 14px, transparent 14px 24px) right;
+
+  background-size:
+    100% 2px,
+    100% 2px,
+    2px 100%,
+    2px 100%;
+
+  background-repeat: no-repeat;
+}
+
+/* 🔥 CENTER LINE ALSO MATCH */
+.airport-box::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -2px;
+  height: calc(100% + 4px);
+  width: 2px;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    #b9c0b8 0 14px,
+    transparent 14px 24px
+  );
+}
+  /* FEATURES STRIP — IMAGE SIZE INCREASE */
+  .features-strip {
+    padding: 0 !important;
+    height: 320px !important;
+    overflow: hidden !important;
+  }
+
+  .marquee-wrapper {
+    height: 320px !important;
+    overflow: hidden !important;
+  }
+
+  .marquee-track {
+    height: 320px !important;
+    display: flex !important;
+    align-items: stretch !important;
+    animation: marqueeFix 40s linear infinite;
+  }
+
+  .feature-item {
+    width: 420px !important;
+    min-width: 420px !important;
+    height: 320px !important;
+    overflow: hidden !important;
+  }
+
+  .feature-img {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .magic-section {
+    padding: 90px 40px 100px !important;
+  }
+
+  .magic-title {
+    font-size: 74px !important;
+    line-height: 1.2 !important;
+    max-width: 1050px !important;
+    margin: 0 auto !important;
+  }
+
+  /* =========================================
+   FLOATING CONTACT — LARGE SIZE FIX
+   ========================================= */
+    .floating-contact {
+    right: px !important;
+    top: 180px !important;
+  }
+
+  .floating-contact a {
+    width: 80px !important;     /* 🔥 box width */
+    height: 80px !important;    /* 🔥 box height */
+  }
+
+  .floating-contact a i {
+    font-size: 30px !important; /* 🔥 icon size */
+  }
+/* ──────────────────────────────────────────
+   THERAPIES SECTION (FIXED)
+────────────────────────────────────────── */
+
+   /* SECTION SPACING */
+  .therapies-section {
+    padding: 100px 40px 90px !important;
+  }
+
+  .why-section {
+    padding: 120px 40px 100px !important;
+  }
+
+  /* LABEL */
+  .section-label {
+    font-size: 18px !important;
+    margin-bottom: 18px;
+  }
+
+  .label-bar {
+    width: 14px !important;
+    height: 28px !important;
+  }
+
+  /* MAIN HEADING */
+  .section-heading {
+    font-size: 64px !important;   /* 🔥 big heading */
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+
+  /* SUB TEXT */
+  .section-sub {
+    font-size: 20px !important;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+
+  /* OFFER STRIP — LEFT & RIGHT SCREEN EDGE JOIN */
+.therapies-section {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.therapies-section .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: visible !important;
+}
+
+.offer-wrap {
+  width: 100vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  transform: none !important;
+  overflow: hidden !important;
+}
+
+.offer-strip {
+  width: 100vw !important;
+  background: #013813 !important;
+  overflow: hidden !important;
+}
+
+.offer-track {
+  display: flex !important;
+  width: max-content !important;
+  animation: scrollOfferMobile 30s linear infinite !important;
+}
+
+.offer-track span {
+  flex: 0 0 auto !important;
+  font-size: 35px !important;
+  padding: 0 45px !important;
+  white-space: nowrap !important;
+}
+
+  /* THERAPY GRID — BREATHING SPACE FIX */
+.therapy-grid {
+
+  max-width: 1500px;        /* keep same */
+  margin: 60px auto;
+  padding: 0 16px;          /* 🔥 small breathing space */
+  box-sizing: border-box;
+
+}
+
+.therapy-card {
+  height: 560px !important;
+}
+
+.therapy-img {
+  height: 100%;
+}
+
+/* OVERLAY */
+.therapy-overlay {
+  padding: 20px 24px !important;
+}
+
+.therapy-name {
+  font-size: 20px !important;
+}
+
+.btn-view {
+  font-size: 15px !important;
+  padding: 12px 20px;
+   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* VIEW ALL BUTTON */
+.center-btn {
+  margin-top: 40px;
+}
+
+.btn-view-all {
+  font-size: 20px !important;
+  padding: 14px 34px;
+}
+  .why-section {
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    padding: 120px 48px 110px !important;
+    box-sizing: border-box !important;
+  }
+
+  .why-section .section-label {
+    margin-bottom: 22px !important;
+  }
+
+  .why-section .section-heading {
+    font-size: 72px !important;
+    line-height: 1.18 !important;
+    margin-bottom: 34px !important;
+  }
+
+  .why-section .section-sub {
+    max-width: 900px !important;
+    font-size: 22px !important;
+    line-height: 1.75 !important;
+    margin: 0 auto 70px !important;
+  }
+
+  .why-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.45fr !important;
+    gap: 52px !important;
+    align-items: stretch !important;
+    max-width: 1500px !important;
+    margin: 0 auto !important;
+  }
+
+  .why-cards-col {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 34px !important;
+  }
+
+  .why-card {
+    min-height: 310px !important;
+    padding: 42px 36px !important;
+  }
+
+  .why-card h4 {
+    font-size: 24px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .why-card p {
+    font-size: 17px !important;
+    line-height: 1.75 !important;
+  }
+
+  .why-icon {
+    width: 64px !important;
+    height: 64px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .why-image-col {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .why-img {
+    width: 100% !important;
+    min-height: 700px !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+ /* =========================================
+   PACKAGES SECTION — 1440+ PREMIUM FIX
+   ========================================= */
+
+
+  .packages-section {
+    padding: 120px 40px 110px;
+  }
+
+  .best-seller-label {
+    max-width: 1400px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    font-size: 38px;
+  }
+
+  .packages-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+  }
+
+  .pkg-card {
+    min-height: 600px;
+    padding: 48px 38px;
+    /* border-radius: 10px; */
+  }
+
+  .pkg-num {
+    font-size: 82px;
+    font-weight: 500;
+  }
+
+  .pkg-name {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .pkg-sub {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .pkg-duration {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .pkg-price {
+    font-size: 42px;
+    font-weight: 700;
+  }
+
+  .pkg-old {
+    font-size: 18px;
+  }
+
+  .pkg-list li {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .pkg-best {
+    font-size: 15px;
+  }
+
+  .pkg-btns a {
+    font-size: 16px;
+    padding: 12px 26px;
+  }
+
+  .packages-viewall {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .btn-view-all-packages {
+    font-size: 18px;
+    padding: 14px 36px;
+  }
+
+
+  /* ──────────────────────────────────────────
+     LOCATIONS SECTION
+  ────────────────────────────────────────── */
+  .locations-section {
+    padding: 48px 24px;
+  }
+
+  .loc-city {
+    font-size: 32px;
+  }
+
+  .loc-region {
+    font-size: 13px;
+  }
+
+  .loc-addr {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .loc-contact,
+  .loc-map {
+    font-size: 13px;
+  }
+
+  .open {
+    font-size: 28px;
+  }
+
+  .btn-view-all-packages {
+  font-size: 17px;
+  padding: 14px 36px;
+  /* border-radius: px; */
+  font-weight: 500;
+  min-width: 180px;
+  text-align: center;
+}
+
+.pkg-btn {
+  font-size: 16px;      /* 🔥 text size */
+  padding: 12px 28px;   /* 🔥 height + width */
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+  /* ──────────────────────────────────────────
+     REVIEWS SECTION
+  ────────────────────────────────────────── */
+  .reviews-section {
+    padding: 72px 0 60px;
+  }
+
+  .review-card {
+    width: 320px;
+    min-height: 220px;
+    padding: 24px 22px;
+  }
+
+  .review-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .review-user img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .review-name {
+    font-size: 16px;
+  }
+
+  .review-source {
+    font-size: 11px;
+  }
+
+  .stars {
+    font-size: 13px;
+  }
+
+  /* ──────────────────────────────────────────
+     MAGIC / MARQUEE SECTION
+  ────────────────────────────────────────── */
+  .magic-section {
+    padding: 32px 32px 52px;
+  }
+
+  .magic-title {
+    font-size: clamp(32px, 4vw, 52px);
+  }
+
+  /* ──────────────────────────────────────────
+     OFFER STRIP
+  ────────────────────────────────────────── */
+  .offer-track span {
+    font-size: 20px;
+    padding: 0 14px;
+  }
+
+  /* ──────────────────────────────────────────
+     CTA SECTION
+  ────────────────────────────────────────── */
+  .cta-section {
+    padding: 72px 32px 44px;
+  }
+
+  .cta-heading {
+    font-size: clamp(32px, 4vw, 54px);
+  }
+
+  .cta-text {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  /* ──────────────────────────────────────────
+     BOOKING SECTION
+  ────────────────────────────────────────── */
+  .booking-layout {
+    max-width: 1320px;
+    min-height: 820px;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .booking-form-wrap {
+    padding: 52px 72px;
+    /* overflow: visible; */
+  }
+
+  .booking-title {
+    font-size: 54px;
+  }
+
+  .booking-subtitle {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 15px;
+  }
+
+  
+
+  .form-group input {
+    height: 52px;
+    font-size: 16px;
+    border: 1.5px solid rgba(255,255,255,0.45);
+  }
+
+  .confirm-btn,
+  .whatsapp-btn,
+  .call-btn {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .booking-info {
+    padding: 0 70px;
+    margin-top: 70px;
+  }
+
+  .info-line {
+    gap: 22px;
+    font-size: 18px !important;
+  }
+
+  .info-line p {
+    font-size: 15px !important;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+/* HORIZONTAL LINE */
+.booking-divider {
+  height: 2px;
+  margin: 100px 0;
+  background: rgba(255,255,255,0.25);
+  position: relative;   
+  width: calc(100% + 90px) !;
+ margin-right: -90px !important; 
+}
+
+/* VERTICAL LINE FROM SAME POINT */
+.booking-divider::after {
+  content: "";
+  position: absolute;
+
+  top: 0;        /* 🔥 same point → join */
+  left: 100%;    /* 🔥 exactly end of line */
+
+  width: 2px;
+  height: 1000px;   /* extend down */
+  background: rgba(255,255,255,0.25);
+}
+
+.booking-layout::after {
+  display: none !important;   /* 🔥 remove extra vertical line */
+}
+
+  /* ──────────────────────────────────────────
+     FOOTER
+  ────────────────────────────────────────── */
+  .footer-logo {
+    font-size: 54px;
+  }
+
+  .footer-logo-sub {
+    font-size: 13px;
+    letter-spacing: 0.28em;
+  }
+
+  .footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer-col h3,
+  .footer-contact h3,
+  .footer-social-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .footer-col a,
+  .f-contact li {
+    font-size: 13px;
+  }
+
+  .footer-socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom-links a {
+    font-size: 12px;
+  }
+
+  /* ──────────────────────────────────────────
+     AIRPORT SECTION
+     (if present — class names from your base CSS)
+  ────────────────────────────────────────── */
+  .airport-section {
+    padding: 44px 32px 52px;
+  }
+
+  .airport-left h2 {
+    font-size: clamp(36px, 4vw, 52px);
+  }
+
+  .airport-right p {
+    font-size: clamp(16px, 1.6vw, 20px);
+  }
+
+  /* ──────────────────────────────────────────
+     PACKAGES SECTION
+  ────────────────────────────────────────── */
+  .packages-section {
+    padding: 56px 24px;
+  }
+
+  .packages-section .section-heading {
+    font-size: 36px;
+  }
+
+  .packages-section .section-sub {
+    font-size: 15px;
+  }
+
+  .pkg-card {
+    padding: 26px 20px;
+  }
+
+  /* ──────────────────────────────────────────
+     GLOBAL SECTION LABELS / HEADINGS
+     (shared utility classes used across sections)
+  ────────────────────────────────────────── */
+  .section-label {
+    font-size: 13px;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .label-bar {
+    width: 10px;
+    height: 18px;
+  }
+
+  /* Generic section heading — update selector if your
+     base CSS uses a different class e.g. .section-title */
+  .section-heading {
+    font-size: clamp(30px, 3.5vw, 48px);
+  }
+
+  .section-sub,
+  .section-desc {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+}
 
 /* ============================================================
    DELIZA WELLNESS SPA — LAPTOP LARGE (1366px – 1440px)
@@ -32,7 +845,7 @@ section {
    All other breakpoints remain untouched.
    ============================================================ */
 
-@media (min-width: 1366px) and (max-width: 1500px) {
+@media (min-width: 1366px) and (max-width: 1440px) {
 
   /* ──────────────────────────────────────────
      NAVBAR
@@ -2286,6 +3099,15 @@ margin: 0 auto;
     line-height: 1.45 !important;
     margin: 0 !important;
   }
+.why-card.hoverable:hover .why-icon,
+.why-card.active .why-icon {
+  background: var(--white);
+}
+
+.why-card.hoverable:hover .why-icon-img,
+.why-card.active .why-icon-img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(21%) saturate(1040%) hue-rotate(93deg) brightness(95%) contrast(90%);
+}
 
 
   /* PACKAGES */
@@ -2784,7 +3606,6 @@ margin: 0 auto;
     color: #7a827a;
   }
 }
-
 /* ============================================================
    SHARED ANIMATIONS / HOVER
    ============================================================ */
@@ -2864,4 +3685,5 @@ margin: 0 auto;
   width: 1.5px;
   background: #7a8f7c;
 
+}
 }
